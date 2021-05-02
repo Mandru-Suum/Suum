@@ -17,7 +17,7 @@ public class KeyInput
         if (combine) {
             control = Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl);
             alter = Input.GetKey(KeyCode.LeftAlt) || Input.GetKey(KeyCode.RightAlt);
-            shift = Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift);
+            shift = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
         } else {
             control = alter = shift = false;
         }
