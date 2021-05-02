@@ -141,7 +141,7 @@ public class KeyInput
             result += "alt+";
         }
         if (shift) {
-            result += "alt+";
+            result += "shift+";
         }
         switch (code)
         {
