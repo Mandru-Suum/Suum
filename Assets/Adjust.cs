@@ -21,7 +21,7 @@ public class Adjust : MonoBehaviour
 
     void Start() {}
         // Update is called once per frame
-        void Update()
+    void Update()
     {
 
     }
@@ -46,15 +46,12 @@ public class Adjust : MonoBehaviour
         return renew.OverlapTest(key);
     }
 
-    public void Replace(Player player, int order)
+    public void Replace(int order)
     {
-        player.ChangeKey(renew, order);
+        if (Player.Get)
+            Player.Get.ChangeKey(renew, order);
+        KeySave.Get.Change(order, renew.Code);
         origin = renew;
-    }
-
-    public void Save(FileStream file)
-    {
-        renew.Save(file);
     }
 
     public void Cancel()
@@ -68,7 +65,7 @@ public class Adjust : MonoBehaviour
     }
     public void Reset()
     {
-        renew = new KeyInput(first, false);
+        renew = new KeyInput(first);
         text.text = renew.Text();
     }
     public void Exchange(Adjust other)

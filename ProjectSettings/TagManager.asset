@@ -3,12 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - EnemyAttack
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Down
   - Water
   - UI
   - 
